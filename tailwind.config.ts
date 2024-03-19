@@ -94,10 +94,11 @@ module.exports = {
     require("@tailwindcss/container-queries"),
     require("@tailwindcss/typography"),
     require("tailwindcss-animate"),
+    // @ts-ignore
     plugin(({ matchUtilities, theme }) => {
       matchUtilities(
         {
-          'animation-delay': (value) => {
+          'animation-delay': (value: any) => {
             return {
               'animation-delay': value
             };
