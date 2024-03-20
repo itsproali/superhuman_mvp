@@ -16,7 +16,7 @@ export function ProductDescription({
   scrollYProgress: MotionValue<number>;
 }) {
   const screenWidth = useWindowWidth();
-  const [animationProperty, setAnimationProperty] = useState(300);
+  const [animationProperty, setAnimationProperty] = useState(280);
 
   useEffect(() => {
     if (screenWidth > 1536) {
@@ -28,7 +28,7 @@ export function ProductDescription({
     } else if (screenWidth > 640 && screenWidth < 768) {
       setAnimationProperty(350);
     } else if (screenWidth < 375) {
-      setAnimationProperty(300);
+      setAnimationProperty(280);
     }
   }, [screenWidth]);
 
@@ -68,7 +68,7 @@ export function ProductDescription({
           translateX,
           width,
         }}
-        className={`absolute z-10 mt-[9px] h-[35px] bg-[#DDD544]`}
+        className={`absolute z-10 mt-[7px] h-[35px] bg-[#DDD544]`}
       >
         {/* <p>Single Ingredient Formulation</p> */}
       </motion.div>
