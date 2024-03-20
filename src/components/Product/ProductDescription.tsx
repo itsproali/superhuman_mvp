@@ -16,7 +16,7 @@ export function ProductDescription({
   scrollYProgress: MotionValue<number>;
 }) {
   const screenWidth = useWindowWidth();
-  const [animationProperty, setAnimationProperty] = useState(200);
+  const [animationProperty, setAnimationProperty] = useState(300);
 
   useEffect(() => {
     if (screenWidth > 1536) {
@@ -28,7 +28,7 @@ export function ProductDescription({
     } else if (screenWidth > 640 && screenWidth < 768) {
       setAnimationProperty(350);
     } else if (screenWidth < 375) {
-      setAnimationProperty(200);
+      setAnimationProperty(300);
     }
   }, [screenWidth]);
 
