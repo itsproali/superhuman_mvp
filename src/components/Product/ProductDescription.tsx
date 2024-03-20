@@ -50,13 +50,13 @@ export function ProductDescription({
     <>
       <div className="mb-6 flex flex-col">
         <h2 className="px-2">{product.title}</h2>
-        <div className="mr-auto flex px-2 pt-2 font-nats">
+        <div className="mr-auto flex gap-2 md:gap-6 px-2 pt-2 font-nats">
           <Price
-            className="text-5xl"
+            className="text-3xl md:text-5xl"
             amount={product.priceRange.maxVariantPrice.amount}
             currencyCode={product.priceRange.maxVariantPrice.currencyCode}
           />
-          <div className="ml-10 pt-4">renews every month</div>
+          <div className="pt-4 text-xs md:text-base">renews every month</div>
         </div>
       </div>
 
@@ -73,7 +73,7 @@ export function ProductDescription({
         {/* <p>Single Ingredient Formulation</p> */}
       </motion.div>
 
-      <div className="flex gap-4 pt-16">
+      <div className="flex gap-2 md:gap-4 pt-16">
         <AddToCart
           variants={product.variants}
           availableForSale={product.availableForSale}

@@ -42,14 +42,14 @@ export default function SupplementProfile({
   };
 
   const renderSection = (type: keyof typeof options) => (
-    <div className="mb-6 grid grid-cols-5 gap-4">
-      <div className="items-left flex flex-col justify-center">
-        <span className="uppercase">{titles[type]}</span>
+    <div className="mb-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+      <div className="items-left flex flex-col justify-center flex-wrap">
+        <span className="uppercase text-xs md:text-base">{titles[type]}</span>
       </div>
       {options[type].map((value) => (
         <button
           key={value}
-          className={`h-12 w-32 cursor-default rounded-lg ${
+          className={`h-12 cursor-default rounded-lg ${
             isSelected(value, type)
               ? "bg-[#ffeb3b] text-black"
               : "bg-gray-100 text-gray-300"
@@ -74,7 +74,7 @@ export default function SupplementProfile({
           <br />
           Facts
         </h1>
-        <div className="rounded-3xl bg-white px-14 py-8">
+        <div className="rounded-3xl bg-white px-2 md:px-14 py-8">
           <div className="">
             {renderSection("capsules")}
             {renderSection("supply")}
