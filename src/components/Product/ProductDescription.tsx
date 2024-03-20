@@ -63,17 +63,19 @@ export function ProductDescription({
       {/* Variant Selector has been turned off, but not deleted */}
       {/* <VariantSelector options={product.options} variants={product.variants} /> */}
 
-      <motion.div
-        style={{
-          translateX,
-          width,
-        }}
-        className={`absolute z-10 mt-[7px] h-[35px] bg-[#DDD544]`}
-      >
-        {/* <p>Single Ingredient Formulation</p> */}
-      </motion.div>
+      {screenWidth < 1024 ? null : (
+        <motion.div
+          style={{
+            translateX,
+            width,
+          }}
+          className={`absolute z-10 mt-[-8px] xl:mt-[-1px] 2xl:mt-[7px] h-[25px] xl:h-[30px] 2xl:h-[35px] bg-[#DDD544]`}
+        >
+          {/* <p>Single Ingredient Formulation</p> */}
+        </motion.div>
+      )}
 
-      <div className="flex gap-2 md:gap-4 pt-16">
+      <div className="flex gap-2 md:gap-4 lg:pt-16">
         <AddToCart
           variants={product.variants}
           availableForSale={product.availableForSale}

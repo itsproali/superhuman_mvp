@@ -34,7 +34,7 @@ const ProductDetails = ({ product }: IProps) => {
           <motion.div
             style={{
               translateY,
-              opacity: width < 768 ? opacity : 1,
+              opacity: width < 1024 ? opacity : 1,
             }}
             className="relative z-0 basis-full md:z-10 lg:basis-4/12"
           >
